@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <h1>@ Mail.ru Checker</h1>
+    <div class="stats">
+      <div class="stat">📬 Всего: <span id="total">0</span></div>
+      <div class="stat">🔴 Непрочитанных: <span id="unread">0</span></div>
+    </div>
+  </div>
+  
+  <div class="email-list" id="emailList">
+    <div class="empty">Загрузка...</div>
+  </div>
+  
+  <div class="controls">
+    <button id="checkBtn" class="btn-check">🔄 Проверить сейчас</button>
+    <button id="openBtn" class="btn-open">📧 Открыть почту</button>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

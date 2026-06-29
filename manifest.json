@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Mail.ru Checker",
+  "version": "3.0.2",
+  "description": "Проверка почты Mail.ru с отображением количества непрочитанных писем",
+  "permissions": [
+    "storage",
+    "notifications",
+    "tabs",
+    "scripting",
+    "cookies"
+  ],
+  "host_permissions": [
+    "https://e.mail.ru/*",
+    "https://*.mail.ru/*",
+    "https://portal.mail.ru/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://e.mail.ru/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "img/16_activ.png",
+      "48": "img/48_activ.png",
+      "128": "img/128_activ.png"
+    }
+  },
+  "icons": {
+    "16": "img/16_activ.png",
+    "48": "img/48_activ.png",
+    "128": "img/128_activ.png"
+  },
+  "options_page": "settings.html",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "mailru-checker",
+  "version": "3.0.0",
+  "description": "Расширение для Chrome/Edge для автоматической проверки почты Mail.ru с отображением количества непрочитанных писем.",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chrome-extension",
+    "mailru",
+    "email-checker"
+  ],
+  "author": "Maksim",
+  "license": "MIT",
+  "devDependencies": {}
+}
